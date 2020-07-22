@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Canvas</title>
+        <script type="text/javascript">
+        var cvs, ctx;
+        window.onload=function(){
+            cvs=document.getElementById("cvs");
+            ctx=cvs.getContext("2d"); 
+            var img=new Image(); //載入影像
+            img.src="1234.jpg";
+            img.onload=function(){ //註冊load事件，圖片載入完成後，才能繪圖
+                ctx.drawImage(this,0,0,cvs.width,cvs.height);
+            };
+            
+        };
+        function invertColor(){
+            var pixels=ctx.getImageData(0,0,cvs.width,cvs.height); //ImageData物件
+            var data=pixels.data;
+            for(var i=0;i<data.length;i+=4){ //一個像素佔據4個資料(bytes) r,g,b,a(範圍 0~255)
+                data[i]=255-data[i]; //紅
+                data[i+1]=255-data[i+1] //綠
+                data[i+2]=255-data[i+2] //藍
+            }
+            ctx.putImageData(pixels,0,0);
+        }
+        </script>
+ 
+    </head>
+    <body>
+    <div><button onclick="invertColor();">顏色的反轉</button></div>
+    <canvas id="cvs" width="800" height="600" style="border: 1px solid #000000;"></canvas>
+    </body>
+</html>

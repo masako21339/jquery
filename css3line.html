@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS3 3</title>
+        <style type="text/css">
+        .box{
+            width: 100px;height: 100px;background-color: red;
+            /*transform: translate(100px,50px); 線性轉換-位移 x,y
+            transform: scale(1.5,0.5); 線性轉換-縮放
+            transform: rotate(45deg); 線性轉換-旋轉 角度deg
+            transform: skew(0deg,30deg); 線性轉換-歪斜 xdeg,ydeg
+            transform: translate(100px,50px) rotate(45deg);*/
+        }
+        .cube>.top{
+            width: 240px;height: 60px;background-color: #dddddd;
+            transform: skew(-45deg,0deg) translate(30px,0px);
+        }
+        .cube>.center{
+            width: 240px;height: 240px;background-color: #aaaaaa;
+            display: inline-block;
+        }
+        .cube>.right{
+            width: 60px;height: 240px;background-color: #888888;
+            display: inline-block;
+            transform: skew(0deg,-45deg) translate(0px,-30px);
+        }
+        </style>
+        
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="cube">
+            <div class="top"></div>
+            <div class="center"></div><div class="right"></div>
+        </div>
+    </body>
+</html>
