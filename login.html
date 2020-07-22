@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
-        <title>Log in</title>
-        <script type="text/javascript">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+    <script>
+    function login(){
+        var accountInput=document.getElementById("account");
+        var passwordInput=document.getElementById("password");
+        var account=accountInput.value;
+        var password=passwordInput.value;
+        console.log("account:"+account,"password:"+password);
+        location.href="homepage.html?account="+account+"&password="+password;
+    }
         
-        </script>
-        <style type="text/css">
-        
-        </style>
+    </script>
+    <style>
+    .account{
+        transform: translate(0px,350px);
+    }
+    .password{
+        transform: translate(0px,360px);
+    }
+    .btn{
+        transform: translate(35px,370px);
+    }
+    </style>
     </head>
     <body>
-        <input type="text" placeholder="請輸入帳號" onfocus="this.placeholder=''" onblur="this.placeholder='請輸入帳號'">
-        <input type="text" placeholder="請輸入密碼" onfocus="this.placeholder=''" onblur="this.placeholder='請輸入密碼'">
-        <button onclick="login();">login</button>
-        <button onclick="cancel();">cancel</button>
+    <div class="text-center">
+    <input id="account"type="text" class="account" placeholder='請輸入帳號' onfocus="this.placeholder=''" onblur="this.placeholder='請輸入帳號'"></input><br>
+    <input id="password" type="text" class="password" placeholder='請輸入密碼' onfocus="this.placeholder=''" onblur="this.placeholder='請輸入密碼'"></input><br>
+    <button class="btn">註冊</button>
+    <button class="btn" onclick="login();">登入</button>
+    </div>
     </body>
 </html>
