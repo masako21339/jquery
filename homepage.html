@@ -27,6 +27,15 @@
         var iframe = document.getElementById("iframe");
         iframe.src = "http://127.0.0.1:8887/" + pageName;
       }
+
+      function focusll(element) {
+        console.log(123);
+        var list = document.getElementsByName("focus");
+        list.forEach(function (li) {
+          li.classList.remove("active");
+        });
+        element.classList.add("active");
+      }
     </script>
     <style>
       /* Remove the navbar's default margin-bottom and rounded borders */
@@ -112,11 +121,13 @@
           <a class="navbar-brand" href="#">WebSiteName</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active">
+          <li name="focus" class="active" onclick="focusll(this);">
             <a href="#" onclick="getData('Home.html');">Home</a>
           </li>
-          <li><a href="#" onclick="getData('About.html');">About</a></li>
-          <li class="dropdown">
+          <li name="focus" onclick="focusll(this);">
+            <a href="#" onclick="getData('About.html');" value="About">About</a>
+          </li>
+          <li name="focus" class="dropdown" onclick="focusll(this);">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >Worker<span class="caret"></span
             ></a>
@@ -130,8 +141,8 @@
               <li><a href="#" onclick="getData('svg.html');">SVG</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact</a></li>
-          <li class="dropdown">
+          <li name="focus"><a href="#">Contact</a></li>
+          <li name="focus" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >Link<span class="caret"></span
             ></a>
