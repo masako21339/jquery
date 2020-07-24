@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title></title>
+    <title>Log in</title>
     <script>
-    function login(){
-        var accountInput=document.getElementById("account");
-        var passwordInput=document.getElementById("password");
-        var account=accountInput.value;
-        var password=passwordInput.value;
-        console.log("account:"+account,"password:"+password);
-        location.href="homepage.html?account="+account+"&password="+password;
-    }
-            
+      function login() {
+        var accountInput = document.getElementById("account");
+        var passwordInput = document.getElementById("password");
+        var account = accountInput.value;
+        var password = passwordInput.value;
+        console.log("account:" + account, "password:" + password);
+        location.href =
+          "http://127.0.0.1:8887/homepage.html?account=" +
+          account +
+          "&password=" +
+          password;
+      }
     </script>
     <style>
-    .account{
-        transform: translate(0px,350px);
-    }
-    .password{
-        transform: translate(0px,360px);
-    }
-    .btn{
-        transform: translate(35px,370px);
-    }
+      /*.account {
+        transform: translate(0px, 350px);
+      }
+      .password {
+        transform: translate(0px, 360px);
+      }
+      .btn {
+        transform: translate(35px, 370px);
+      }*/
+      #back {
+        background: #cccccc;
+        width: 500px;
+        height: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        box-shadow: 0px 1px 2px 1px #aaaaaa,
+          inset 0px 1px 1px rgba(255, 255, 255, 0.7);
+        border-radius: 3px;
+      }
     </style>
-    </head>
-    <body>
-    <div class="text-center">
-    <input id="account"type="text" class="account" placeholder='請輸入帳號' onfocus="this.placeholder=''" onblur="this.placeholder='請輸入帳號'"></input><br>
-    <input id="password" type="text" class="password" placeholder='請輸入密碼' onfocus="this.placeholder=''" onblur="this.placeholder='請輸入密碼'"></input><br>
-    <button class="btn" value="registered" onclick="location.href='registered.html';">註冊</button>
-    <button class="btn" onclick="login();">登入</button>
+  </head>
+  <body>
+    <div id="back" class="text-center">
+      <div class="container">
+        <h2>Log in</h2>
+      </div>
+      <label class="control-label col-sm-2" for="account">Account:</label>
+      <div class="col-sm-10">
+        <input
+          id="account"
+          type="text"
+          class="form-control"
+          placeholder="請輸入帳號"
+          onfocus="this.placeholder=''"
+          onblur="this.placeholder='請輸入帳號'"
+        />
+      </div>
+      <label class="control-label col-sm-2" for="password">Password:</label>
+      <div class="col-sm-10">
+        <input
+          id="password"
+          type="text"
+          class="form-control"
+          placeholder="請輸入密碼"
+          onfocus="this.placeholder=''"
+          onblur="this.placeholder='請輸入密碼'"
+        />
+      </div>
+      <button
+        class="btn"
+        onclick="location.href='http://127.0.0.1:8887/registered.html';"
+      >
+        註冊
+      </button>
+      <button class="btn" onclick="login();">登入</button>
     </div>
-    </body>
+  </body>
 </html>
