@@ -36,21 +36,30 @@
       #back {
         background: #cccccc;
         width: 500px;
-        height: 600px;
-        margin: 40px auto;
+        height: 180px;
+        margin: 20px auto;
         padding: 30px;
         box-shadow: 0px 1px 2px 1px #aaaaaa,
           inset 0px 1px 1px rgba(255, 255, 255, 0.7);
         border-radius: 3px;
       }
+
+      input {
+        margin: 5px;
+      }
     </style>
   </head>
   <body>
-    <div id="back" class="text-center">
-      <div class="container">
-        <h2>Log in</h2>
-      </div>
-      <label class="control-label col-sm-2" for="account">Account:</label>
+    <div class="container text-center">
+      <h2>Log in</h2>
+    </div>
+    <div id="back" class="text-center tst123">
+      <label
+        class="control-label col-sm-2"
+        for="account"
+        style="text-align: center; line-height: 39px;"
+        >Account:</label
+      >
       <div class="col-sm-10">
         <input
           id="account"
@@ -61,7 +70,12 @@
           onblur="this.placeholder='請輸入帳號'"
         />
       </div>
-      <label class="control-label col-sm-2" for="password">Password:</label>
+      <label
+        class="control-label col-sm-2"
+        for="password"
+        style="text-align: center; line-height: 40px;"
+        >Password:</label
+      >
       <div class="col-sm-10">
         <input
           id="password"

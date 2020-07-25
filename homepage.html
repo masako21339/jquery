@@ -46,21 +46,14 @@
 
       /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
       .row.content {
-        height: 450px;
+        height: 100vh;
       }
 
       /* Set gray background color and 100% height */
       .sidenav {
         padding-top: 20px;
         background-color: #f1f1f1;
-        height: 100%;
-      }
-
-      /* Set black background color, white text and some padding */
-      footer {
-        background-color: #555c55;
-        color: white;
-        padding: 15px;
+        height: 100vh;
       }
 
       /* On small screens, set height to 'auto' for sidenav and grid */
@@ -118,7 +111,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
+          <a class="navbar-brand" href="#">Masako</a>
         </div>
         <ul class="nav navbar-nav">
           <li name="focus" class="active" onclick="focusll(this);">
@@ -141,15 +134,17 @@
               <li><a href="#" onclick="getData('svg.html');">SVG</a></li>
             </ul>
           </li>
-          <li name="focus"><a href="#">Contact</a></li>
+          <li name="focus" onclick="getData('Contact.html');">
+            <a href="#">Contact</a>
+          </li>
           <li name="focus" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >Link<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
-              <li><a href="#"></a>A</li>
-              <li><a href="#">Page 1-2</a></li>
-              <li><a href="#">Page 1-3</a></li>
+              <li><a href="https://www.google.com/">Google</a></li>
+              <li><a href="https://www.youtube.com/">Youtube</a></li>
+              <li><a href="https://www.twitch.tv/">Twitch</a></li>
             </ul>
           </li>
         </ul>
@@ -205,20 +200,13 @@
         </div>
         <div class="col-sm-2 sidenav">
           <div class="well" style="color: silver;">
-            <p>ADS</p>
+            <p>faker01</p>
           </div>
           <div class="well" style="color: silver;">
-            <p>ADS</p>
+            <p>faker02</p>
           </div>
         </div>
       </div>
     </div>
-
-    <footer
-      class="container-fluid text-center"
-      style="opacity: 0.5; height: 45px;"
-    >
-      <p>masako21339@gmail.com 0912345678</p>
-    </footer>
   </body>
 </html>
